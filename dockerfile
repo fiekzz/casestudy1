@@ -6,9 +6,9 @@ COPY package.json .
 COPY bun.lockb .
 COPY prisma/schema.prisma prisma/schema.prisma
 
-RUN bunx prisma generate
 
 RUN bun install --production
+RUN bunx prisma generate
 
 COPY src src
 COPY tsconfig.json .
