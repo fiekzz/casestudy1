@@ -5,7 +5,7 @@ WORKDIR /app
 COPY package.json .
 COPY bun.lockb .
 COPY prisma/schema.prisma prisma/schema.prisma
-
+COPY .env .
 
 RUN bun install --production
 RUN bunx prisma generate
