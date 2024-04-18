@@ -4,10 +4,13 @@ import { DateTime } from "luxon";
 import jwt from "@elysiajs/jwt";
 import { autoroutes } from "elysia-autoroutes";
 import { html } from "@elysiajs/html";
+import { cors } from '@elysiajs/cors'
 
 const app = bootstrap();
 
 app.use(autoroutes());
+
+app.use(cors())
 
 app.onError(({ code, set }) => {
   if (code === "NOT_FOUND") {
