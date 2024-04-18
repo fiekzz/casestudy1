@@ -34,8 +34,8 @@ model Roles {
 model Attendance {
   attendanceID String   @id @default(cuid())
   userID       String
-  checkIn      DateTime
-  checkOut     DateTime
+  checkIn      DateTime?
+  checkOut     DateTime?
   users        Users    @relation(fields: [userID], references: [userID])
 }
 
@@ -44,5 +44,6 @@ model PaymentByWeek {
   userID             String
   startDateOfTheWeek DateTime
   amount             Float
+  totalHours         Float? @default(0)
   users              Users    @relation(fields: [userID], references: [userID])
 }
