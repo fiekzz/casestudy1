@@ -41,3 +41,9 @@ yarn-error.log*
 **/*.log
 package-lock.json
 **/*.bun
+
+# Park files
+apiserverfiekzz.json
+park.txt
+park.yml
+parkv2.conf
